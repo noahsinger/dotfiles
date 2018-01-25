@@ -1,0 +1,15 @@
+# apm list --installed --bare > package-list.txt
+# apm install --packages-file ./package-list.txt
+
+autoclose-html@0.23.0
+busy-signal@1.4.3
+editor-stats@0.17.0
+erb-snippets@1.1.0
+intentions@1.1.5
+linter@2.2.0
+linter-eslint@8.4.0
+linter-rubocop@2.2.2
+linter-ui-default@1.6.10
+minimap@4.29.7
+standard-formatter@2.8.0
+
