@@ -1,0 +1,49 @@
+[user]
+	name = Noah Singer
+	email = noah.singer@gmail.com
+
+[credential]
+	helper = cache
+
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+
+[push]
+	default = simple
+
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[http]
+	sslVerify = false
+
+[alias]
+    br = branch
+    st = status
+    co = checkout
+    cl = clone
+    pf = push --force-with-lease
+    df = diff
+    dfs = diff --staged
+    cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+    lg1 = log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(bold white)- %an%C(reset)' -30
+    lg2 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all -30
+    lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all -30
+    lg = !git lg1
+    sl = shortlog --format=short
+    sls = shortlog --numbered --format=short --summary
+    ca = commit --amend
+    car = commit --amend --no-edit
+    unstage = reset
+    unchange = checkout --
+    upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
