@@ -18,6 +18,7 @@
     tabType: "soft"
   "exception-reporting":
     userId: "1c7d30a2-6356-7504-bf74-220e04dde4db"
+  "linter-ui-default": {}
   metrics:
     userId: "38144ddc73bb9aba3be5cf052e7cde1c23438e26"
   "release-notes":
