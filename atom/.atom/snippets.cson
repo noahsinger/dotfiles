@@ -28,3 +28,8 @@
   'PHP tags with an echo':
     'prefix': 'phpe'
     'body': '<?php echo \'$0\' ?>'
+
+'.source.ruby':
+  'Binding Pry':
+    'prefix': 'bp'
+    'body': 'binding.pry'
