@@ -2,6 +2,7 @@ autoclose-html@0.23.0
 busy-signal@1.4.3
 editor-stats@0.17.0
 erb-snippets@1.1.0
+file-icons@2.1.16
 intentions@1.1.5
 linter@2.2.0
 linter-erb@1.1.0
