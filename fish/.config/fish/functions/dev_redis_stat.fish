@@ -1,3 +1,7 @@
 function dev_redis_stat
-  redis-stat --server --daemon
+  if gem list redis-stat -i
+    redis-stat --server --daemon
+  else
+    echo 'please install the redis-stat gem'
+  end
 end
