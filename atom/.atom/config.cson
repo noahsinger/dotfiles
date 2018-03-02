@@ -7,11 +7,13 @@
     makeNeverCloseElementsSelfClosing: true
   core:
     closeDeletedFileTabs: true
+    disabledPackages: [
+      "linter-scss-lint"
+    ]
     telemetryConsent: "limited"
     titleBar: "custom"
   editor:
     fontFamily: "Input Mono"
-    fontSize: 13
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -19,7 +21,9 @@
     tabType: "soft"
   "exception-reporting":
     userId: "1c7d30a2-6356-7504-bf74-220e04dde4db"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 217
+    showPanel: true
   metrics:
     userId: "38144ddc73bb9aba3be5cf052e7cde1c23438e26"
   "release-notes":
@@ -31,6 +35,7 @@
       "text.plain"
       "text.plain.null-grammar"
     ]
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
