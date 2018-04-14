@@ -47,3 +47,5 @@
     unstage = reset
     unchange = checkout --
     upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+[core]
+	excludesfile = ~/.gitignore_global
