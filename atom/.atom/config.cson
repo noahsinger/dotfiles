@@ -5,10 +5,13 @@
   "autoclose-html":
     closeOnEndOfOpeningTag: true
     makeNeverCloseElementsSelfClosing: true
+  "better-git-blame":
+    searchInLayerEnabled: false
   core:
     closeDeletedFileTabs: true
     disabledPackages: [
       "linter-scss-lint"
+      "linter-codeclimate"
     ]
     telemetryConsent: "limited"
     titleBar: "custom"
@@ -21,11 +24,17 @@
     tabType: "soft"
   "exception-reporting":
     userId: "1c7d30a2-6356-7504-bf74-220e04dde4db"
+  "git-blame":
+    columnWidth: 270
+    ignoreWhiteSpaceDiffs: true
+    showOnlyLastNames: true
+  "linter-codeclimate":
+    disableTimeout: true
   "linter-ui-default":
     panelHeight: 217
-    showPanel: true
   metrics:
     userId: "38144ddc73bb9aba3be5cf052e7cde1c23438e26"
+  minimap: {}
   "release-notes":
     viewedVersion: "0.94.0"
   "spell-check":
