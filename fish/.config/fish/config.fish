@@ -9,3 +9,5 @@ end
 if test -d /Users/nsinger/pear/bin
   set -g fish_user_paths "/Users/nsinger/pear/bin" $fish_user_paths
 end
+
+set -gx PATH /Users/nsinger/.rvm/gems/ruby-2.4.2/bin $PATH
