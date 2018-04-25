@@ -1,3 +1,3 @@
-function tm
+function tm --wraps tmux
   tmux
 end
