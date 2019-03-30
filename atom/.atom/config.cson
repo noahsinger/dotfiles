@@ -11,6 +11,7 @@
     closeDeletedFileTabs: true
     disabledPackages: [
       "linter-scss-lint"
+      "linter-rubocop"
     ]
     telemetryConsent: "limited"
     titleBar: "custom"
