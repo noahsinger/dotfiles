@@ -33,3 +33,6 @@
   'Binding Pry':
     'prefix': 'bp'
     'body': 'binding.pry'
+  'IO Write to Pasteboard':
+    'prefix': 'iow'
+    'body': 'IO.write(\'| pbcopy\', $1.to_json)'
