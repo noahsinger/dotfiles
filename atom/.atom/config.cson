@@ -24,14 +24,22 @@
     tabType: "soft"
   "exception-reporting":
     userId: "1c7d30a2-6356-7504-bf74-220e04dde4db"
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   "git-blame":
     columnWidth: 270
     ignoreWhiteSpaceDiffs: true
     showOnlyLastNames: true
+  jshint:
+    supportLintingJsx: true
   "linter-codeclimate":
     disableTimeout: true
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
   "linter-ui-default":
     panelHeight: 217
+    showPanel: true
   metrics:
     userId: "38144ddc73bb9aba3be5cf052e7cde1c23438e26"
   minimap: {}
@@ -44,7 +52,6 @@
       "text.plain"
       "text.plain.null-grammar"
     ]
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
