@@ -1,6 +1,2 @@
-package config
-package rvm
-package z
 theme bobthefish
 theme default
-theme eclm

@@ -1,28 +1,37 @@
-set -gx PATH $PATH ~/bin
+set -g theme_display_git yes
+set -g theme_display_git_dirty yes
+set -g theme_display_git_untracked yes
+set -g theme_display_git_ahead_verbose yes
+set -g theme_display_git_dirty_verbose yes
+set -g theme_display_git_stashed_verbose yes
+set -g theme_display_git_master_branch yes
+set -g theme_git_worktree_support no
+set -g theme_display_vagrant no
+set -g theme_display_docker_machine yes
+set -g theme_display_k8s_context yes
+set -g theme_display_hg no
+set -g theme_display_virtualenv yes
+set -g theme_display_ruby no
+set -g theme_display_user ssh
+set -g theme_display_hostname ssh
+set -g theme_display_vi no
+set -g theme_display_date no
+set -g theme_display_cmd_duration yes
+set -g theme_title_display_process yes
+set -g theme_title_display_path yes
+set -g theme_title_display_user yes
+set -g theme_title_use_abbreviated_path no
+set -g theme_avoid_ambiguous_glyphs yes
+set -g theme_powerline_fonts yes
+set -g theme_nerd_fonts no
+set -g theme_show_exit_status yes
+set -g theme_color_scheme dark
+set -g fish_prompt_pwd_dir_length 0
+set -g theme_project_dir_length 1
+set -x EDITOR vim
+set -Ux LC_ALL en_US.UTF-8
+set -Ux LANG en_US.UTF-8
+rvm default
 
-set -x OBJC_DISABLE_INITIALIZE_FORK_SAFETY YES
-
-if test -d /usr/local/opt/imagemagick@6/bin
-  set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
-end
-
-if test -d /Users/nsinger/pear/bin
-  set -g fish_user_paths "/Users/nsinger/pear/bin" $fish_user_paths
-end
-
-set -gx PATH /Users/nsinger/.rvm/gems/ruby-2.4.2/bin $PATH
-set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/node@8/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/node@8/bin" $fish_user_paths
-
-set PATH /usr/local/bin $PATH
-
-set -g fish_user_paths "/usr/local/opt/node@8/bin" $fish_user_paths
-set -gx LDFLAGS "-L/usr/local/opt/node@8/lib"
-set -gx CPPFLAGS "-I/usr/local/opt/node@8/include"
-
-set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+set -g PGDATABASE postgres
+set -g fish_user_paths "/usr/local/sbin"
