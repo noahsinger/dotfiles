@@ -1,0 +1,1491 @@
+al
+val
+@work_order
+@work_order.meter_entry
+exit
+@work_order.meter_entry
+exit
+@work_order.service_entry_meter_not_void?
+exit
+@work_order.service_entry_meter_not_void?
+exit
+se
+service_entry.errors.full_messages
+exit
+@work_order.service_entry.valid?
+@work_order.service_entry
+exit
+@work_order.service_entry
+@work_order.service_entry.valid?
+exit
+attributes
+exit
+8
+@work_order.service_entry&
+@work_order.service_entry
+exit
+@work_order.service_entry
+exit
+@work_order.service_entry
+@work_order.reload
+@work_order.service_entry
+exit
+service_entry
+service_entry.meter_entries
+service_entry.meter_entry
+service_entry.meter_entry.value
+exit
+service_entry.meter_entry.value
+vehicle.meter_entries
+vehicle.meter_entries.first.value
+vehicle.meter_entries.last.value
+exit
+service_entry.errors
+service_entry.errors.details
+service_entry.errors.details[meter_entry.value]
+service_entry.errors.details[:meter_entry.value]
+service_entry.errors.details[:"meter_entry.value"]
+exit
+meter_entry
+exit
+exi
+exit
+meter_entry.void
+meter_entry.save
+service_entry.meter_entry
+meter_entry.value
+service_entry.meter_entry.value = 10
+service_entry.sacve
+service_entry.save
+exit
+has_last_meter_entry?
+attributes[:meter_entry_attributes]
+exit
+work_order.has_last_meter_entry?
+work_order.meter_entry
+exit
+attributes
+exit
+attributes
+exit
+attributes["meter_entry_attributes"]
+@work_order.last_meter_entry?
+exit
+history_params[:item_type_eq]
+@object
+@versions
+@versions = PaperTrail::Version.ransack(history_params).result.ignore_admin_update.by_human.reorder(created_at: :desc)
+exit
+@work_order.meter_entry
+exit
+attributes["meter_entry_attributes"].present?
+attributes["meter_entry_attributes"]
+exit
+attributes["meter_entry_attributes"]
+exit
+@work_order.secondary_meter_entry
+@work_order.meter_entry
+@work_order.state
+attributes
+attributes["state"]
+exit
+service_entry
+service_entry.meter_entry
+service_entry.secondary_meter_entry
+service_entry.meter_entry
+service_entry.save
+service_entry.errors.full_messages
+meter_entry&.void?
+!service_entry.valid?
+secondary_meter_entry&.void?
+!secondary_meter_entry.valid?
+exit
+@service_schedules 
+@service_schedules.inspect
+IO.write '| pbcopy', @service_schedules.to_json
+exit
+@work_order
+exit
+@work_order
+exit
+@work_order
+exit
+meter_entry&.void?
+!service_entry&.meter_entry&.void?
+secondary_meter_entry&.void?
+secondary_meter_entry
+!service_entry&.secondary_meter_entry&.void?
+meter_entry&.void?
+meter_entry
+secondary_meter_entry
+exit
+@work_order.secondary_meter_entry
+attributes["secondary_meter_entry_attributes"]
+exit
+subject
+subject.meter_entry
+subject.secondary_meter_entry
+subject.vehicle
+subject.vehicle.meter_entries
+subject.vehicle.reload
+subject.vehicle.meter_entries
+exit
+subject
+subject.errors.full_messages
+subject.errors
+subject.save
+subject
+exit
+subject
+subject.vehicle
+subject.vehicle.meter_entries.size
+subject.vehicle.meter_entries
+exit
+subject.vehicle.meter_entries
+subject.vehicle.meter_entries.sort(&:date)
+subject.vehicle.meter_entries.sort_by(&:date)
+subject.vehicle.reload
+subject.vehicle.meter_entries.sort_by(&:date)
+subject.vehicle
+subject.vehicle.reload
+subject.vehicle.meter_entries.sort_by(&:date)
+subject.vehicle.meter_entries.sort_by(&:date).map {|me| [me.date, me.void]}
+subject.vehicle.meter_entries.sort_by(&:date).map {|me| [me.date, me.value, me.void]}
+exit
+subject.vehicle.meter_entries.sort_by(&:date).map {|me| [me.date, me.value, me.void]}
+subject.reload
+subject.vehicle.meter_entries.sort_by(&:date).map {|me| [me.date, me.value, me.void]}
+subject.vehicle.meter_entries.first
+subject.vehicle.meter_entries.sort_by(&:date).map {|me| [me.date, me.value, me.meterable_type, me.void]}
+exit
+subject.work_order_status
+subject.state
+subject.reload
+subject
+subject.valid?
+subject.errors.full_messages
+exit
+subject.errors.full_messages
+exit
+subject.errors.full_messages
+exit
+subject.vehicle.meter_entries.sort_by(&:date).map {|me| [me.date, me.value, me.meterable_type, me.void]}
+exit
+subject.vehicle.meter_entries.sort_by(&:date).map {|me| [me.date, me.value, me.meterable_type, me.void]}
+subject.errors
+subject.valid?
+exit
+resource_params
+exit
+resource_params
+exit
+vehicle
+vehicle.meter_entries
+vehicle.reload
+vehicle.meter_entries
+work_order
+work_order.errors
+exit
+@work_order
+@work_order.meter_entry
+!@work_order.meter_entry
+attributes["meter_entry_attributes"]
+exit
+@work_order.meter_entry
+!@work_order.meter_entry
+attributes["meter_entry_attributes"].present?
+attributes["meter_entry_attributes"]
+attributes
+exit
+attributes
+exit
+attributes
+attributes.to_h
+exit
+attributes
+exit
+attributes
+work_order
+exit
+exi
+exit
+work_order
+work_order.errors
+exit
+work_order
+work_order.meter_entry
+work_order.meter_entry.save
+work_order.meter_entry
+work_order.errors
+exit
+attributes
+@work_order.meter_entry
+attributes["meter_entry_attributes"]
+attributes[:meter_entry_attributes]
+attributes[:meter_entry]
+attributes[:meter_entries]
+attributes[:meter_entry_attributes]
+attributes[:work_order_status]
+attributes[:completed_at]
+attributes[:started_at]
+attributes[:issued_at]
+1.day.ago.to_s
+1.day.ago
+exit
+attributes["meter_entry_attributes"]
+attributes[:meter_entry_attributes]
+attributes[:started_at]
+attributes["meter_entry_attributes"]
+attributes[:meter_entry_attributes]
+exit
+attributes["meter_entry_attributes"]
+exit
+@work_order.meter_entry
+attributes["meter_entry_attributes"]
+attributes["meter_entry_attributes"].present?
+!@work_order.meter_entry
+@work_order.build_meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+@work_order.meter_entry
+@work_order.meter_entry.valid?
+@work_order.meter_entry.errors
+attributes["meter_entry_attributes"]["vehicle_id"] = @work_order.vehicle.id
+@work_order.vehicle.id
+@work_order
+@work_order.vehicle
+attributes
+attributes["vehicle"]
+attributes[:vehicle]
+@work_order.meter_entry.vehicle = attributes[:vehicle]
+@work_order.meter_entry
+@work_order.meter_entry.vehicle
+@work_order.meter_entry.valid?
+@work_order.meter_entry.errors
+exit
+attributes["meter_entry_attributes"].present?
+!@work_order.meter_entry
+@work_order.build_meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+@work_order.meter_entry.vehicle = attributes[:vehicle]
+@work_order.meter_entry.vehicle = attributes[:started_at]
+exit
+attributes["meter_entry_attributes"].present?
+@work_order.build_meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+@work_order.meter_entry.vehicle = attributes[:vehicle]
+@work_order.meter_entry.started_at = attributes[:started_at]
+@work_order.meter_entry.date = attributes[:started_at]
+@work_order.meter_entry.valid?
+exit
+vehicle.meter_entries
+work_order
+work_order.errors
+exit
+work_order
+exit
+work_order
+exit
+work_order
+exit
+work_order
+work_order.meter_entry
+exit
+work_order
+work_order.errors
+exit
+work_order
+work_order.errors
+exit
+@work_order.meter_entry
+attributes["meter_entry_attributes"]
+exit
+exit
+@work_order
+@work_order.errors
+exit
+@work_order
+work_order
+exit
+work_order
+exit
+service_entry.errors
+service_entry.save
+meter_entry&.void?
+meter_entry&.auto_void_reason
+!service_entry&.meter_entry&.void?
+meter_entry&.auto_void_reason != "non_sequential"
+exit
+meter_entry&.void?
+meter_entry&.auto_void_reason != "non_sequential"
+!service_entry&.meter_entry&.void?
+exit
+@work_order.meter_entry
+attributes["meter_entry_attributes"].present?
+exit
+attributes["meter_entry_attributes"].present?
+@work_order.meter_entry && attributes["meter_entry_attributes"].present?
+!@work_order.meter_entry.valid? && attributes["meter_entry_attributes"]["void"] != 0
+!@work_order.meter_entry.valid?
+attributes["meter_entry_attributes"]["void"] == 0
+attributes["meter_entry_attributes"]["void"]
+attributes["meter_entry_attributes"]["void"] == 1
+exit
+@work_order.meter_entry && attributes["meter_entry_attributes"].present?
+attributes["meter_entry_attributes"]
+!@work_order.meter_entry.valid?
+attributes["meter_entry_attributes"]["void"] == "1"
+next
+n
+exit
+service_entry.save
+meter_entry&.void?
+meter_entry&.auto_void_reason
+meter_entry&.auto_void_reason != "non_sequential"
+!service_entry&.meter_entry&.void?
+service_entry.meter_entry.void = true
+service_entry.save
+service_entry&.meter_entry&.persisted?
+exit
+@work_order.meter_entry
+attributes["meter_entry_attributes"].present?
+@work_order.meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+!@work_order.meter_entry.valid?
+attributes["meter_entry_attributes"]["void"] != "1"
+!@work_order.meter_entry.valid?
+@work_order.meter_entry.errors
+@work_order.meter_entry.valid?
+attributes["meter_entry_attributes"]["void"] == "1"
+attributes
+attributes["meter_entry_attributes"]["void"] == "1"
+exit
+@work_order.meter_entry && attributes["meter_entry_attributes"].present?
+@work_order.meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+attributes
+!@work_order.meter_entry.valid? && attributes["meter_entry_attributes"]["void"] != "1"
+exit
+attributes["meter_entry_attributes"].present?
+@work_order.meter_entry
+exit
+attributes["meter_entry_attributes"].present?
+@work_order.meter_entry
+@work_order.build_meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+@work_order.meter_entry.vehicle = attributes[:vehicle]
+@work_order.meter_entry.date = attributes[:started_at]
+@work_order.meter_entry
+@work_order.meter_entry,valid?
+@work_order.meter_entry.valid?
+!@work_order.meter_entry.valid?
+@work_order.save
+@work_order.errors
+@work_order.meter_entry
+exit
+@work_order
+@work_order.meter_entry
+@work_order.meter_entry.valid?
+@work_order.valid?
+@work_order.errors
+exit
+@work_order.valid?
+@work_order.errors
+@work_order.save
+@work_order.errors
+attributes
+@work_order.update(attributes)
+@work_order.errors
+exit
+@work_order.update(attributes)
+@work_order.errors
+attributes
+@work_order.service_entry
+@work_order.meter_entry
+@work_order.meter_entry.valid?
+attributes["meter_entry_attributes"]["void"].to_i != 1
+attributes["meter_entry_attributes"]
+exit
+step
+attributes["meter_entry_attributes"].present?
+@work_order.meter_entry
+@work_order.build_meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+@work_order.meter_entry.vehicle = attributes[:vehicle]
+@work_order.meter_entry.date = attributes[:started_at]
+@work_order.meter_entry.valid?
+exit
+vehicle
+vehicle.secondary_meter
+exit
+attributes[:vehicle]
+exit
+attributes[:vehicle]
+exit
+attributes[:vehicle]
+exit
+work_order
+work_order.meter_entry
+work_order.service_entry
+work_order.service_entry.meter_entry
+attributes[:vehicle].meter_entries.size
+attributes[:vehicle].meter_entries.map {|me| [me.date, me.value]}
+attributes[:vehicle].meter_entries.map {|me| [me.date, me.value, me.meter_ttype]}
+attributes[:vehicle].meter_entries.map {|me| [me.date, me.value, me.meter_type]}
+exit
+attributes["secondary_meter_entry_attributes"].present?
+@work_order.secondary_meter_entry
+@work_order.build_secondary_meter_entry
+.assign_attributes(attributes["secondary_meter_entry_attributes"])
+@work_order.build_secondary_meter_entry.assign_attributes(attributes["secondary_meter_entry_attributes"])
+@work_order.secondary_meter_entry.vehicle = attributes[:vehicle]
+@work_order.secondary_meter_entry.date = attributes[:started_at]
+@work_order.build_secondary_meter_entry
+@work_order.secondary_meter_entry.valid?
+attributes["secondary_meter_entry_attributes"]["void"].to_i != 1
+attributes["secondary_meter_entry_attributes"]["void"] = 1
+attributes["secondary_meter_entry_attributes"]["auto_voided_at"] = Time.current
+attributes["secondary_meter_entry_attributes"]["auto_void_reason"] = "non_sequential"
+@work_order.secondary_meter_entry
+@work_order.secondary_meter_entry.valid?
+attributes["secondary_meter_entry_attributes"]
+@work_order.update(attributes)
+@work_order.vehicle.secondary_meter_entries.size
+@work_order.vehicle.reload
+@work_order.vehicle.secondary_meter_entries.size
+exit
+attributes["secondary_meter_entry_attributes"].present?
+@work_order.secondary_meter_entry
+@work_order.build_secondary_meter_entry.assign_attributes(attributes["secondary_meter_entry_attributes"])
+@work_order.secondary_meter_entry.vehicle = attributes[:vehicle]
+@work_order.secondary_meter_entry.date = attributes[:started_at]
+@work_order.secondary_meter_entry
+@work_order.secondary_meter_entry.valid?
+exit
+attributes["secondary_meter_entry_attributes"].present?
+@work_order.secondary_meter_entry
+@work_order.build_secondary_meter_entry.assign_attributes(attributes["secondary_meter_entry_attributes"])
+@work_order.secondary_meter_entry.vehicle = attributes[:vehicle]
+@work_order.secondary_meter_entry.date = attributes[:started_at]
+@work_order.secondary_meter_entry
+@work_order.secondary_meter_entry.valid?
+@work_order.vehicle.secondary_meter_entries
+@work_order
+@work_order.vehicle
+attributes[:vehicle]
+attributes[:vehicle].secondary_meter_entries
+@work_order.secondary_meter_entry
+@work_order.secondary_meter_entry.valid?
+@work_order.vehicle
+@work_order.secondary_meter_entry.valid?
+@work_order.secondary_meter_entry
+attributes[:vehicle].secondary_meter_entries
+@work_order.secondary_meter_entry
+@work_order.secondary_meter_entry.save
+vehicle
+exitvehicle
+exit
+vehicle.secondary_meter_entries
+xeit
+exit
+meter_type
+meter_entry&.void?
+meter_entry&.auto_void_reason
+!service_entry&.meter_entry&.void?
+exit
+service_entry
+service_entry.save
+voidable_service_entry_meter
+service_entry.meter_entry.void = true
+service_entry.save
+service_entry&.meter_entry&.persisted?
+voidable_service_entry_meter("secondary")
+service_entry&.meter_entry&.persisted?
+service_entry.meter_entry.void
+exit
+voidable_service_entry_meter
+voidable_service_entry_meter('secondary')
+voidable_service_entry_meter('test')
+exit
+attributes["meter_entry_attributes"].present?
+@work_order.meter_entry
+@work_order.build_meter_entry.assign_attributes(attributes["meter_entry_attributes"])
+@work_order.meter_entry.vehicle = attributes[:vehicle]
+@work_order.meter_entry.date = attributes[:started_at]
+@work_order.meter_entry
+@work_order.meter_entry.void = false
+@work_order.meter_entry
+@work_order.meter_entry.valid?
+attributes["meter_entry_attributes"]["void"].to_i != 1
+attributes["meter_entry_attributes"]["void"].to_i == 1
+@work_order.meter_entry.valid?
+attributes["meter_entry_attributes"]["auto_voided_at"] = nil
+attributes["meter_entry_attributes"]["auto_void_reason"] = ""
+@work_order.update(attributes)
+@work_order
+@work_order.meter_entry
+@work_order.service_entry
+@work_order.state
+exit
+service_entry
+ServiceEntry.new(attributes)
+attributes
+exit
+attributes
+exit
+attributes
+ServiceEntry.new(attributes)
+service_entry
+service_entry.save
+exit
+service_entry
+service_entry = ServiceEntry.new(attributes)
+service_entry.save
+meter_entry&.void?
+meter_entry&.auto_void_reason != "non_sequential"
+!service_entry&.meter_entry&.void?
+service_entry.meter_entry.update(void: true)
+service_entry
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.save
+voidable_service_entry_meter?
+service_entry
+voidable_service_entry_meter?
+service_entry.meter_entry.void = true
+voidable_service_entry_meter?("secondary")
+service_entry.save
+service_entry
+service_entry&.meter_entry&.persisted?
+service_entry
+exit
+service_entry
+exit
+service_entry
+service_entry.work_order
+service_entry.work_order == self
+exit
+meter_record
+meter_record.void = false
+meter_record.valid?
+meter_record.vehicle = attributes[:vehicle]
+meter_record.date = attributes[:started_at]
+meter_record.valid?
+meter_record
+meter_record.vehicle = attributes[:vehicle]
+attributes
+meter_record.vehicle_id = attributes[:vehicle_id]
+meter_record
+meter_record.valid?
+exit
+service_entry
+service_entry.save
+service_entry
+service_entry&.meter_entry&.persisted
+service_entry&.meter_entry&.persisted?
+service_entry.meter_entry
+service_entry.meter_entry.save
+service_entry.meter_entry.valid?
+service_entry.valid?
+exit
+service_entry.valid?
+service_entry.meter_entry.valid?
+service_entry.save
+service_entry.meter_entry.valid?
+exit
+service_entry
+service_entry.meter_entry
+service_entry.meter_entry.valid?
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.meter_entry.valid?
+voidable_service_entry_meter?(service_entry)
+meter_entry&.void?
+meter_entry
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.meter_entry.valid?
+voidable_service_entry_meter?(service_entry)
+service_entry.meter_entry.void = true
+service_entry.meter_entry.valid?
+service_entry.meter_entry.errors
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.save
+service_entry.meter_entry.valid?
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.meter_entry.valid?
+voidable_service_entry_meter?(service_entry)
+service_entry.meter_entry.void = true
+service_entry.meter_entry
+attributes
+service_entry.meter_entry.value = attributes["meter_entry_attributes"]["value"] unless service_entry.meter_entry.value
+attributes
+attributes["meter_entry_attributes"]
+attributes
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.save
+voidable_service_entry_meter?(service_entry)
+meter_entry&.void?
+meter_entry
+meter_entry&.auto_void_reason != "non_sequential"
+service_entry&.meter_entry&.void?
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.save
+voidable_service_entry_meter?(service_entry)
+service_entry.meter_entry.void = true
+service_entry.save
+service_entry&.meter_entry&.persisted?
+exit
+service_entry = ServiceEntry.new(attributes)
+service_entry.save
+voidable_service_entry_meter?(service_entry)
+service_entry.meter_entry
+service_entry.meter_entry.void
+service_entry.meter_entry.void = true
+service_entry&.meter_entry&.persisted?
+xit
+exit
+attributes
+exit
+attributes
+service_entry = ServiceEntry.new(attributes)
+service_entry.save
+service_entry.errors
+voidable_service_entry_meter?(service_entry)
+meter_entry&.auto_void_reason
+exit
+meter_record
+meter_record.valid?
+void_requested = (attributes[meter_attribute_name]["void"].to_i == 1)
+void_requested = (attributes[meter_attribute_name]["void"].delete.to_i == 1)
+void_requested = (attributes[meter_attribute_name].delete("void").to_i == 1)
+exit
+vehicle.meter_entries
+exit
+@work_order.work_order_line_item
+@work_order.work_order_line_items
+exit
+@work_order.work_order_line_items
+@work_order.work_order_line_items.size
+exit
+@work_order.work_order_line_items.size
+q
+exit
+q
+@work_order.work_order_line_items.size
+exit
+@work_order.work_order_line_items.size
+exit
+@work_order.work_order_line_items.size
+exit
+@work_order.duplicated
+exit
+workOrder
+work_o
+work_order
+work_order.vehicle
+exit
+work_order
+work_order.duplicated
+work_order.vehicle
+exit
+@work_order.new_record?
+exit
+WorkOrder.model_name.human
+t(:details)
+@work_order.new_record?
+@work_order.persisted?
+@work_order.new_record?
+f
+exit
+@work_order
+exit
+@work_order
+@work_orderexit
+exit
+@work_order
+@work_order.meter_entry
+exit
+@work_order.meter_entry
+exit
+collection = "workOrder.work_order_sub_line_items"
+exit
+user
+exit
+user
+exit
+user
+exit
+user
+exit
+attributes
+exit
+primary_meter_entry_required?
+meter_entry.try(:value)
+meter_entry.try(:value).blank?
+!primary_meter_entry_required?
+meter_entry.try(:value).blank?
+exit
+!primary_meter_entry_required?
+meter_entry.try(:value)&.blank?
+meter_entry.try(:value).blank?
+exit
+service_entry
+service_entry.save
+exit
+service_entry.save
+exit
+service_entry.meter_entry
+service_entry.meter_entry.save
+service_entry.save
+exit
+work_order_status
+exit
+service_entry&.meter_entry&.persisted?
+exit
+@wo
+@wo.save
+@wo.service_entry
+exit
+@wo.save
+@wo.valid?
+@wo.service_entry
+@wo.errors.full_messages
+exit
+@wo.account
+@wo.account.require_a_meter_entry_on_service_entry_or_completed_work_order
+exit
+@wo.save
+@wo.meter_entry
+exit
+meter_record.void
+meter_record.valid?
+meter_record.errors.full_messages
+void_requested
+exit
+attributes
+void_value = attributes[meter_attribute_name].delete("void").to_s
+void_requested = %w[true 1].include?(void_value)
+meter_record
+meter_record.assign_attributes(attributes[meter_attribute_name])
+meter_record
+meter_record.valid?
+meter_record.errors.full_messages
+exit
+attributes
+exit
+attributes
+exit
+attributes
+exit
+attributes
+void_value = attributes[meter_attribute_name].delete("void").to_s
+void_requested = %w[true 1].include?(void_value)
+meter_record
+meter_record.void = false
+meter_record
+meter_record.valid?
+void_requested
+meter_record.valid?
+void_requested
+attributes[meter_attribute_name]["auto_voided_at"]
+attributes[meter_attribute_name]["auto_voided_at"] = nil
+attributes[meter_attribute_name]["auto_void_reason"] = "void_service_entry_at_user_request"
+attributes[meter_attribute_name]["auto_void_reason"]
+attributes
+exit
+meter_enrty
+meter_entry
+exit
+meter_record
+meter_record.valid?
+void_requested
+exit
+meter_record.valid?
+meter_record
+void_requested
+exit
+meter_record
+exit
+meter_record
+exit
+meter_record
+meter_record.valid?
+exit
+meter_record.valid?
+meter_record
+meter_record.valid?
+meter_record.errors
+exit
+meter_record
+meter_record.valid?
+exit
+meter_record
+meter_record.valid?
+exit
+meter_record
+exit
+meter_record
+exit
+meter_record
+meter_record.valid?
+void_requested
+exit
+meter_record
+exit
+meter_record.valid?
+meter_record.errors
+exit
+meter_record.valid?
+meter_record.errors
+exit
+meter_record.errors
+meter_record.valid?
+meter_record.errors
+exit
+meter_record
+meter_record.valid?
+meter_record.errors
+exit
+meter_record
+meter_record.valid?
+meter_record.errors
+exit
+meter_record
+meter_record.valid?
+void_requested
+exit
+meter_record
+exit
+meter_record
+meter_record.valid?
+meter_record.errors
+exit
+exi
+exit
+meter_record
+meter_record.valid?
+exit
+meter_record
+meter_record.valid?
+void_requested
+exit
+meter_record
+meter_record.valid?
+meter_record.errors
+exit
+meter_record
+meter_record.valid?
+exit
+meter_record
+meter_record.valid?
+meter_record.errors
+exit
+meter_record
+meter_record.valid?
+exit
+meter_record
+meter_record.valid?
+exit
+subject
+subject.valid?
+subject.errors
+exit
+subject.service_entry
+subject.service_entry.meter_entry
+subject.service_entry.secondary_meter_entry
+exit
+service_entry
+service_entry&.meter_entry
+service_entry&.meter_entry&.persisted?
+service_entry&.meter_entry&.errors
+!service_entry&.meter_entry&.persisted?
+primary_meter_entry_required?
+exit
+service_entry
+service_entry&.meter_entry&.persisted?
+service_entry&.secondary_meter_entry&.persisted?
+primary_meter_entry_required?
+meter_entry_value.present?
+secondary_meter_entry_value.present?
+service_entry.errors.full_messages
+exit
+issue.save
+exit
+Numberable.all
+exit
+numberable
+numberable_column_value
+exit
+numberable
+exit
+subject.next_work_order_number
+WorkOrder.numberable
+exit
+WorkOrder.numberable
+exit
+highest_work_order_number = WorkOrder.order(:number).pluck(:number).last || 1
+next_work_order_number
+exit
+------------------------------------------------------------------
+exit
+current_account
+Current.account
+tenant
+ActsAsTenant.current_tenant
+exit
+Money::Currency.all
+exit
+part.account.currency.downcase.to_sym
+exit
+part.unit_cost
+exit
+part.currency
+c_hash[:iso_code]
+part.currency != c_hash[:iso_code]
+part.currency != c_hash[:iso_code].to_s
+exit
+current_account_membership.ability.allowed_part_location_ids
+exit
+current_account_membership
+current_account
+exit
+current_account_membership.ability.allowed_part_location_ids
+exit
+nxet_work_order_numbers
+nxet_work_order_number
+next_work_order_number
+next_work_order_number_was
+exit
+allowed_part_location_ids
+exit
+purchase_order_line_items
+callr
+caller
+exit
+@account_membership.parts_access
+allowed_part_location_ids.empty?
+allowed_part_location_ids
+exit
+role
+role.purchase_orders_view
+role.purchase_orders_create_update
+role.purchase_orders_approve
+role.purchase_orders_delete
+role.purchase_orders_receive
+role.purchase_orders_access == "full"
+allowed_part_location_ids.any?
+allowed_part_location_ids
+exit
+account_membership
+exit
+due_soon_meter_threshold
+exit
+due_soon_meter_threshold
+exit
+params
+exit
+params
+exit
+due_soon_meter_threshold
+exit
+due_soon_meter_threshold_was
+due_soon_meter_threshold_change
+exit
+due_soon_meter_threshold_was
+due_soon_meter_threshold_change
+exit
+value
+value.gsub(",","")
+self[:due_soom_meter_threshold]
+self[:due_soon_meter_threshold]
+value.gsub!(",","")
+exit
+value.gsub(",","")
+self[:due_soon_meter_threshold]
+exit
+line_item
+line_item.subtotal
+5 * 8.13
+Money.new(5 * 8.13)
+Money.new(8.13) * 5
+Money.new(813) * 5
+Money.new(5 * 813)
+exit
+attributes
+attributes[:images_attributes]
+issue
+issue.images
+issue.save
+issue.images
+issue.assign_attributes(attributes)
+exit
+issue.images
+issue.assign_attributes(attributes)
+issue.images
+issue.save
+exit
+account.last_used_work_order_number
+number.presence || numberable.next_numbe
+number.presence || numberable.next_number
+highest_work_order_number = account.last_used_work_order_number || 1
+number_to_assign = number.presence || numberable.next_number
+number_to_assign <= highest_work_order_number
+exit
+highest_work_order_number = account.last_used_work_order_number || 1
+account.last_used_work_order_number
+number_to_assign = number.presence || numberable&.next_number || highest_work_order_number
+exit
+highest_work_order_number = account.last_used_work_order_number || 0
+number_to_assign = number.presence || numberable&.next_number || highest_work_order_number
+exit
+exi
+exit
+highest_work_order_number = account.last_used_work_order_number || 0
+number_to_assign = number.presence || numberable&.next_number || 1
+number_to_assign <= highest_work_order_number
+exit
+saved_change_to_next_work_order_number?
+WorkOrder.numberable&.next_number
+exit
+saved_change_to_next_work_order_number?
+exit
+saved_change_to_next_work_order_number?
+exit
+next_work_order_number
+exit
+next_work_order_number
+exit
+next_work_order_number
+exit
+next_work_order_number
+exit
+next_work_order_number
+exit
+unit_cost_cents
+unit_cost
+unit_cost / 100.0
+exit
+unit_cost
+self[:unit_cost]
+exit
+unit_cost
+unit_cost_percise
+exit
+cost
+exit
+unit_cost_cents
+self.unit_cost_cents
+exit
+unit_cost_percise
+unit_cost_cents
+unit_cost_cents = 1.23456 * 100
+unit_cost_cents = Money.new(1.23456 * 100)
+exit
+unit_cost_cents
+unit_cost_cents = Money.new(1.23456 * 100)
+exit
+subject
+subject.part
+subject
+exit
+cost
+exit
+cost
+exit
+cost
+exit
+cost
+exit
+subject
+exit
+subject
+subject.service_tasks
+x = subject.perform
+x
+x.service_tasks
+x
+x.service_program_line_items
+x.service_program_line_items.count
+x.service_program_line_items
+x.service_program_line_items.size
+service_task_names.size
+service_task_names
+exit
+resource_params
+exit
+@service_entry.totalAmount
+@service_entry.total_amount
+exit
+@service_entry.total_amount
+@service_entry.id
+@service_entry.total_amount
+@service_entry.reload
+@service_entry.total_amount
+exit
+@service_entry.total_amount
+@service_entry.reload
+@service_entry.total_amount
+@service_entry.update(resource_params)
+@service_entry.total_amount
+exit
+@service_entry.reload
+@service_entry.total_amount
+@service_entry.update(resource_params)
+@service_entry.total_amount
+@service_entry.reload
+@service_entry.total_amount
+exit
+is_a?(WorkOrder)
+is_a?(ServiceEntry)
+labor_subtotal.present?
+labor_subtotal_cents.positive?
+parts_subtotal.present? && parts_subtotal_cents.positive?
+!all_subtotals_empty?
+(is_a?(ServiceEntry) && ((labor_subtotal.present? && labor_subtotal_cents.positive?) || (parts_subtotal.present? && parts_subtotal_cents.positive?) || !all_subtotals_empty?))
+total_amount
+exit
+(is_a?(ServiceEntry) && ((labor_subtotal.present? && labor_subtotal_cents.positive?) || (parts_subtotal.present? && parts_subtotal_cents.positive?) || !all_subtotals_empty?))
+is_a?(WorkOrder)
+exit
+is_a?(WorkOrder)
+(is_a?(ServiceEntry) && ((labor_subtotal.present? && labor_subtotal_cents.positive?) || (parts_subtotal.present? && parts_subtotal_cents.positive?) || !all_subtotals_empty?))
+exit
+total_amount
+exit
+total_amount
+exit
+total_amount
+reload!
+total_amount
+exit
+total_amount
+exit
+last_service_entry_line_item?
+destroyed_directly?
+exit
+@work_order.errors
+@work_order.errors.full_messages
+exit
+@work_order.errors
+exit
+@work_order.errors
+exit
+@work_order.errors.full_messages
+@work_order.errors.ifrst
+@work_order.errors.first
+exit
+@work_order.errors.first
+exit
+@work_order.errors.first
+@work_order.errors.full_messages
+exit
+@work_order.errors.first
+exit
+@work_order.errors.first
+@work_order.errors.full_messages
+exit
+========================
+resource_params
+exit
+resource_params
+exit
+resource_params
+exit
+resource_params
+exit
+resource_params
+exit
+resource_params
+exit
+resource_params
+exit
+resource_params
+exit
+resource_params
+exit
+cost
+puts 'hello' if cost
+puts 'hello' if cost.present?
+exit
+unit_cost
+exit
+@service_entry
+@service_entry.service_tasks
+@service_entry.service_entry_line_items
+exit
+@service_entry.service_entry_line_items
+exit
+@service_entry.service_entry_line_items
+@service_entry.service_entry_line_items.errors
+@service_entry.service_entry_line_items.first.errors
+exit
+cost
+cost.to_f
+cost.to_i
+super(cost)
+unit_cost
+exit
+cost
+super(cost)
+reload!
+reload
+unit_cist
+unit_cost
+exit
+costy
+cost
+unit_cost = cost
+unit_cost
+self.unit_cost
+exit
+cost
+cost.to_f
+"".to_f
+exit
+cost
+exit
+params
+params['q']
+params['q']['s']
+exit
+@q
+@q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+sorting_by_aisle_row_bin = @q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+sorting_by_aisle_row_bin
+sorting_by_aisle_row_bin.present? && (@part_location.nil? && PartLocation.count > 1)
+sorting_by_aisle_row_bin
+@part_location.nil?
+@part_location
+PartLocation.count > 1
+@q.sorts
+@q.result
+exit
+sorting_by_aisle_row_bin = @q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+sorting_by_aisle_row_bin.present? && (@part_location.nil? && PartLocation.count > 1)
+@results = @q.result
+@results.size
+sorting_by_aisle_row_bin
+@results.except(:order)
+@results
+@results = @results.except(:order)
+@results.select("part_location_details.*")
+@results = @q.result
+exit
+relation
+relation.to_sql
+exit
+relation.to_sql
+@part_location.nil? && PartLocation.count > 1
+relation = relation.joins(:part_location_details).where('part_location_details.active': true).where('part_location_details.id': @part_location.id)
+relation.to_sql
+@part_location
+exit
+relation.to_sq
+relation.to_sql
+@part_location.nil? && PartLocation.count > 1
+relation = relation.joins(part_location_details: [:part_locations]).where('part_location_details.active': true).where('part_location_details.id': @part_location.id)
+relation.to_sql
+exit
+relation
+relation = relation.joins(part_location_details: [:part_location]).where('part_location_details.active': true).where('part_locations.id': @part_location.id)
+relation.to_sql
+relation.size
+exit
+relation
+relation.size
+relation.to_sql
+@q = relation.ransack(params[:q])
+q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+@q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+sorting_by_aisle_row_bin = @q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+exit
+@q = relation.ransack(params[:q])
+sorting_by_aisle_row_bin = @q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+sorting_by_aisle_row_bin.present? && (@part_location.nil? && PartLocation.count > 1)
+exit
+relation
+@q = relation.ransack(params[:q])
+sorting_by_aisle_row_bin = @q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+@q.sorts = "number asc" if sorting_by_aisle_row_bin.present? && (@part_location.nil? && PartLocation.count > 1)
+@results = @q.result
+@results
+@results.class
+sorting_by_aisle_row_bin
+exit
+params[:q]
+@q = relation.ransack(params[:q])
+sort_setting(@q, "number asc")
+sorting_by_aisle_row_bin = @q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+exit
+@q = relation.ransack(params[:q])
+sort_setting(@q, "number asc")
+sorting_by_aisle_row_bin = @q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+@q.sorts = "number asc" if sorting_by_aisle_row_bin.present? && (@part_location.nil? && PartLocation.count > 1)
+exit
+@results = @q.result
+sorting_by_aisle_row_bin
+exit
+@results
+@results.to_sql
+exit
+@results
+@results.to_sql
+exit
+params[:status]
+params[:status].present?
+exit
+params[:status].present?
+params[:status]
+exit
+stock_status_query = params[:status].present? && %w[low_stock out_of_stock low_or_out_of_stock].include?(params[:status])
+stock_status_query = params[:status].presence && %w[low_stock out_of_stock low_or_out_of_stock].include?(params[:status])
+stock_status_query = %w[low_stock out_of_stock low_or_out_of_stock].include?(params[:status])
+exit
+number
+self.number
+exit
+number
+self.number
+numberable
+exit
+part_location_details
+part_location_details.size
+part_location_details.first.part
+part_location_details.first
+part_location_details.first.object
+part_location_details.sort {|pld| pld.object.aisle}
+part_location_details.sort {|pld1, pld2| pld1.object.aisle == pld2.object.aisle}
+part_location_details.sort {|pld1, pld2| pld1.object.aisle <=> pld2.object.aisle}
+exit
+@q
+@q.result
+@q.result.size
+@q.result.first
+sorting_by_aisle_row_bin
+@q.sorts
+@q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+params
+@q.sorts
+@q.sorts.first
+@q.sorts.size
+last
+@q.sorts.last
+@q.sorts.map(&:name)
+@q.sorts.detect { |s| s.name == "part_location_details_aisle" }
+@q.sorts.detect { |s| s.name == "aisle" }
+exit
+destination
+destination.id
+exit
+service_task_a
+service_task_b
+eit
+exit
+service_task_a
+service_task_b
+exit
+service_task_a
+service_task_b
+exit
+service_task_a
+service_task_b
+exit
+source
+destination
+@ignored_attributes
+exit
+source
+destination
+@ignored_attributes
+exit
+original_hvac
+original_hvac.valid?
+original_hvac.save
+original_hvac.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+form_builder.object.errors
+exit
+@statuses
+exit
+@status_data
+exit
+ServiceTask.pluck(:name)
+exit
+ServiceTask.pluck(:standard)
+exit
+ServiceTask.where(name: 'Tire Balance')
+ServiceTask.archived.where(name: 'Tire Balance')
+ServiceTask.archived
+exit
+ServiceTask.pluck(:name)
+ServiceTask.size
+ServiceTask.all.size
+ServiceTask.archive
+ServiceTask.archived
+uit
+exit
+custom_service_task_group
+exit
+tire_replacement
+exit
+tire_replacement
+exit
+attributes
+exit
+exit
+ei
+x
+attributes
+exit
+attributes
+exit
+q
+exit
+attributes
+exit
+attributes
+exit
+@vehicles.take.service_reminders.
+@vehicles.take.service_reminders
+@vehicles.take.service_reminders.class
+exit
+resource_params
+@service_entry
+@service_entry.service_task
+@service_entry.service_tasks
+@service_entry = ServiceEntry.new(resource_params)
+@service_entry.save
+@service_entry.service_tasks
+exit
+resource_params
+se = ServiceEntry.new(resource_params)
+exit
+resource_params
+se = ServiceEntry.new(resource_params)
+exit
+line_item
+line_item.service_task
+new_service_tasks
+exit
+new_service_tasks
+line_item.service_task
+line_item.service_task.valid?
+exit
+line_item.service_task
+line_item.service_task.valid?
+exit
