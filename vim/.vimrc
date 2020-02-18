@@ -23,7 +23,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_theme = 'dark'
 
-let g:airline#extensions#ale#enabled = 1 
+let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='jellybeans'
 
 let g:airline#extensions#hunks#enabled=0
@@ -145,7 +145,7 @@ highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 " DarkGray number line
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGray ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
-" Normal 
+" Normal
 hi Normal guibg=NONE ctermbg=NONE
 
 " Split windows bottom and right
@@ -199,6 +199,11 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 map <leader>t. :tabn<cr>
 map <leader>t, :tabp<cr>
+
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
 " Configure spell checking
 nmap <silent> <leader>p :set spell!<CR>
