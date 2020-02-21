@@ -11,6 +11,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
+Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
 call plug#end()
 
 let g:airline_powerline_fonts = 1
