@@ -15,6 +15,7 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server sup
 Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
 Plug 'airblade/vim-gitgutter'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
@@ -35,10 +36,14 @@ let g:airline#extensions#branch#enabled=1
 
 let NERDTreeShowHidden=1
 
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_space_guides = 1
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-  \ '*': ['remove_trailing_lines', 'trim_whitespace']
-  \ }
+      \ '*': ['remove_trailing_lines', 'trim_whitespace']
+      \ }
 " 'remove_trailing_lines' - Remove all blank lines at the end of a file.
 " 'trim_whitespace' - Remove all trailing whitespace characters at the end of every line.
 
@@ -118,10 +123,10 @@ set backspace=indent,eol,start
 
 " Tabs. May be overriten by autocmd rules
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set softtabstop=0
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 
 " Status bar
