@@ -47,6 +47,7 @@ let g:ale_fixers = {
 " 'remove_trailing_lines' - Remove all blank lines at the end of a file.
 " 'trim_whitespace' - Remove all trailing whitespace characters at the end of every line.
 
+let $FZF_DEFAULT_OPTS = '--height=70% --preview="cat {}" --preview-window=right:60%:wrap'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 :ab bp binding.pry
