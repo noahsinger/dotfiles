@@ -15,7 +15,8 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server sup
 Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
 Plug 'airblade/vim-gitgutter'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'Yggdroot/indentLine'
+" Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
@@ -36,10 +37,14 @@ let g:airline#extensions#branch#enabled=1
 
 let NERDTreeShowHidden=1
 
-let g:indent_guides_auto_colors = 1
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_space_guides = 1
+" let g:indent_guides_auto_colors = 1
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_start_level = 2
+" let g:indent_guides_space_guides = 1
+
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray19 ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray15 ctermbg=4
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace']
@@ -76,6 +81,8 @@ set t_Co=256
 
 " General Config
 set title
+" set number
+" set number relativenumber " hybrid relative/absolute line numbers
 set number
 set backspace=indent,eol,start
 set history=1000
@@ -91,6 +98,9 @@ set wildmenu
 set wildmode=list:longest,full
 set whichwrap=b,s,h,l,<,>,[,]
 
+set list
+set listchars=tab:›\.,eol:¬,trail:⋅
+
 set rtp+=/usr/local/opt/fzf
 
 " For regular expressions turn magic on
@@ -100,7 +110,7 @@ set magic
 nmap <leader>w :w!<cr>
 
 " :W sudo saves the file
-command W w !sudo tee % > /dev/null
+" command W w !sudo tee % > /dev/null
 
 " Scrolling
 set scrolljump=5
@@ -222,8 +232,8 @@ nmap <silent> <leader>p :set spell!<CR>
 map <leader>i mmgg=G`m<CR>
 
 " Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+" nnoremap p p=`]<C-o>
+" nnoremap P P=`]<C-o>
 
 " Toggle highlighting of search results
 nnoremap <leader><space> :nohlsearch<cr>
@@ -257,3 +267,26 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! Diffs call s:DiffWithSaved()
+
+" for persisting sessions
+" function! MakeSession()
+"   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+"   if (filewritable(b:sessiondir) != 2)
+"     exe 'silent !mkdir -p ' b:sessiondir
+"     redraw!
+"   endif
+"   let b:filename = b:sessiondir . '/session.vim'
+"   exe "mksession! " . b:filename
+" endfunction
+
+" function! LoadSession()
+"   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+"   let b:sessionfile = b:sessiondir . "/session.vim"
+"   if (filereadable(b:sessionfile))
+"     exe 'source ' b:sessionfile
+"   else
+"     echo "No session loaded."
+"   endif
+" endfunction
+" au VimEnter * nested :call LoadSession()
+" au VimLeave * :call MakeSession()
