@@ -7,3 +7,22 @@ fish/.config/fish/fishd.787b8ab37ba0
 *.pid
 
 fish/\.config/fish/functions/prod_redis_stat\.fish
+vim/.vim/plugged/ale/
+vim/.vim/plugged/coc.nvim/
+vim/.vim/plugged/comfortable-motion.vim/
+vim/.vim/plugged/ctrlp.vim/
+vim/.vim/plugged/fzf.vim/
+vim/.vim/plugged/fzf/
+vim/.vim/plugged/nerdTree/
+vim/.vim/plugged/vim-airline-themes/
+vim/.vim/plugged/vim-airline/
+vim/.vim/plugged/vim-commentary/
+vim/.vim/plugged/vim-devicons/
+vim/.vim/plugged/vim-fugitive/
+vim/.vim/plugged/vim-gitgutter/
+vim/.vim/plugged/vim-indent-guides/
+vim/.vim/plugged/vim-indentguides/
+vim/.vim/plugged/vim-polyglot/
+vim/.vim/plugged/vim-rails/
+vim/.vim/plugged/vim-ruby/
+vim/.vim/plugged/vim-surround/

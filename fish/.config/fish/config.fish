@@ -35,3 +35,4 @@ rvm default
 
 set -g PGDATABASE postgres
 set -g fish_user_paths "/usr/local/sbin"
+set -g OP_SESSION_fleetio "fjHSwH9X07CKC-C6eKTG67MrTpvGMUM4bT2sjnIkcqE"
