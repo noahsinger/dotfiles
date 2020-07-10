@@ -58,6 +58,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 :ab bp binding.pry
 
+:ab clog console.log("")
 set path+=/Users/nsinger/code/fleetio/fleetio
 set nocompatible
 
