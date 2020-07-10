@@ -244,6 +244,30 @@ nnoremap <leader><space> :nohlsearch<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+let tp=$TERM_PROGRAM
+if tp == 'Apple_Terminal'
+  :" map Mac OS X Terminal.app
+
+  " map Home/End:
+  :map <ESC>[H <Home>
+  :map <ESC>[F <End>
+  " small 'o' letter in <C-o> means no exit from the insert mode
+  :imap <ESC>[H <C-o><Home>
+  :imap <ESC>[F <C-o><End>
+  :cmap <ESC>[H <Home>
+  :cmap <ESC>[F <End>
+
+  " map Option+Left/Option+Right:
+  " for this to work you must have the bindings in Settings > Keyboard set
+  " as follows:
+  " 'option cursor left' to '\033b'
+  " 'option cursor right' to '\033f'
+  :map <ESC>f el
+  :imap <ESC>b <C-o>b
+  :imap <ESC>f <C-o>el
+  :cmap <ESC>f el
+endif
+
 " Quick timeouts on key combinations.
 set timeoutlen=300
 
