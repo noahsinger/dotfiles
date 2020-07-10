@@ -57,7 +57,6 @@ let $FZF_DEFAULT_OPTS = '--height=70% --preview="cat {}" --preview-window=right:
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 :ab bp binding.pry
-
 :ab clog console.log("")
 set path+=/Users/nsinger/code/fleetio/fleetio
 set nocompatible
@@ -153,6 +152,7 @@ colorscheme onedark
 syntax enable
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufEnter * :set number
+autocmd FileType coffee set tabstop=8|set shiftwidth=2|set expandtab
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set showcmd
