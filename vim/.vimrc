@@ -13,6 +13,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
 Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
+Plug 'tpope/vim-rails'
 Plug 'airblade/vim-gitgutter'
 Plug 'yuttie/comfortable-motion.vim'
 " Plug 'Yggdroot/indentLine'
@@ -57,6 +58,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 :ab bp binding.pry
 
+set path+=/Users/nsinger/code/fleetio/fleetio
 set nocompatible
 
 " Enable filetype plugins
