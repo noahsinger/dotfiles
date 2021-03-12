@@ -153,6 +153,9 @@ syntax enable
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufEnter * :set number
 autocmd FileType coffee set tabstop=8|set shiftwidth=2|set expandtab
+autocmd FileType js set tabstop=8|set shiftwidth=2|set expandtab
+autocmd FileType ts set tabstop=8|set shiftwidth=2|set expandtab
+autocmd FileType tsx set tabstop=8|set shiftwidth=2|set expandtab
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set showcmd
