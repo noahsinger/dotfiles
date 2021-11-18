@@ -7,17 +7,19 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
-Plug '/usr/local/opt/fzf'
+Plug 'neovim/nvim-lspconfig'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
 Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rhubarb' " for github integration using GBrowse
 Plug 'airblade/vim-gitgutter'
 Plug 'yuttie/comfortable-motion.vim'
-" Plug 'Yggdroot/indentLine'
-" Plug 'nathanaelkane/vim-indent-guides'
+Plug 'github/copilot.vim'
+Plug 'eslint/eslint'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
@@ -38,22 +40,17 @@ let g:airline#extensions#branch#enabled=1
 
 let NERDTreeShowHidden=1
 
-" let g:indent_guides_auto_colors = 1
-" let g:indent_guides_guide_size = 1
-" let g:indent_guides_start_level = 2
-" let g:indent_guides_space_guides = 1
-
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray19 ctermbg=3
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray15 ctermbg=4
-
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-      \ '*': ['remove_trailing_lines', 'trim_whitespace']
+      \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \ 'javascript': ['eslint'],
+      \ 'typescriptreact': ['eslint']
       \ }
 " 'remove_trailing_lines' - Remove all blank lines at the end of a file.
 " 'trim_whitespace' - Remove all trailing whitespace characters at the end of every line.
 
-let $FZF_DEFAULT_OPTS = '--height=70% --preview="cat {}" --preview-window=right:60%:wrap'
+" let $FZF_DEFAULT_OPTS = '--height=70% --preview="cat {}" --preview-window=right:60%:wrap'
+let $FZF_DEFAULT_OPTS = '--height=50% --preview="~/.vim/plugged/fzf.vim/bin/preview.sh {}"'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 :ab bp binding.pry

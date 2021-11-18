@@ -35,4 +35,12 @@ rvm default
 
 set -g PGDATABASE postgres
 set -g fish_user_paths "/usr/local/sbin"
+set -g fish_user_paths "/Users/nsinger/bin" $fish_user_paths
+set -g fish_user_paths "/Users/nsinger/.rvm/gems/ruby-2.7.1@fleetio/bin" $fish_user_paths
 set -g OP_SESSION_fleetio "fjHSwH9X07CKC-C6eKTG67MrTpvGMUM4bT2sjnIkcqE"
+set -g PAPERTRAIL_API_TOKEN '1P7FoBGpJo0dZizPs2p'
+set -g fish_user_paths "/usr/local/opt/node@14/bin" $fish_user_paths
+
+set -x OBJC_DISABLE_INITIALIZE_FORK_SAFETY YES
+
+status --is-interactive; and source (nodenv init -|psub)

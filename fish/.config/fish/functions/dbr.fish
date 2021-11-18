@@ -1,7 +1,7 @@
 function dbr
-  if count $argv > /dev/null 
+  if count $argv > /dev/null
     bundle exec rake db:rollback STEP=$argv[1]
   else
-    bundle exec rake db:rollback
+    bundle exec rake db:rollback:leader
   end
 end
