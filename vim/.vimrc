@@ -18,7 +18,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb' " for github integration using GBrowse
 Plug 'airblade/vim-gitgutter'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'github/copilot.vim'
+Plug 'github/copilot.vim' " ':Copilot setup' to setup
 Plug 'eslint/eslint'
 call plug#end()
 
