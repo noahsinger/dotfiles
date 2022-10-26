@@ -1,26 +1,43 @@
 call plug#begin()
 " :PlugInstall to install
+" :PlugUpdate to update
+" :PlugClean to clean
 Plug 'scrooloose/nerdTree'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim' " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Plug 'w0rp/ale' " rubocop and linting: https://techandfi.com/rubocop-vim/
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'sheerun/vim-polyglot'
+Plug 'nvim-lua/plenary.nvim' " required by nvim-reload below
+Plug 'famiu/nvim-reload' " :Reload and :Restart
+Plug 'tpope/vim-fugitive' " plugin for Git
+Plug 'sheerun/vim-polyglot' " syntax highlighting
 Plug 'neovim/nvim-lspconfig'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary' " comment stuff out
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
+
+" https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+" :CocUpdateSync to update extensions
+" :CocInstall coc-tsserver coc-eslint coc-json to install extensions
+" :CocUninstall coc-css to uninstall
+" :CocList to manage
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support,
+
 Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb' " for github integration using GBrowse
-Plug 'airblade/vim-gitgutter'
+Plug 'APZelos/blamer.nvim' " inline git blame, :BlamerToggle
+Plug 'airblade/vim-gitgutter' " :GitGutterLineHighlightsToggle
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'github/copilot.vim' " ':Copilot setup' to setup
+" Plug 'github/copilot.vim' " ':Copilot setup' to setup
 Plug 'eslint/eslint'
 call plug#end()
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -30,8 +47,6 @@ let g:airline_symbols.space = "\ua0"
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
-let g:airline_theme = 'dark'
-
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='jellybeans'
 
@@ -43,8 +58,9 @@ let NERDTreeShowHidden=1
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-      \ 'javascript': ['eslint'],
-      \ 'typescriptreact': ['eslint']
+      \ 'javascript': ['eslint', 'prettier'],
+      \ 'typescriptreact': ['eslint'],
+      \ 'typescript': ['eslint']
       \ }
 " 'remove_trailing_lines' - Remove all blank lines at the end of a file.
 " 'trim_whitespace' - Remove all trailing whitespace characters at the end of every line.
@@ -52,6 +68,12 @@ let g:ale_fixers = {
 " let $FZF_DEFAULT_OPTS = '--height=70% --preview="cat {}" --preview-window=right:60%:wrap'
 let $FZF_DEFAULT_OPTS = '--height=50% --preview="~/.vim/plugged/fzf.vim/bin/preview.sh {}"'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+let g:loaded_perl_provider = 0
+
+" https://github.com/APZelos/blamer.nvim
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
 
 :ab bp binding.pry
 :ab clog console.log("")
@@ -80,7 +102,6 @@ set t_Co=256
 
 " General Config
 set title
-" set number
 " set number relativenumber " hybrid relative/absolute line numbers
 set number
 set backspace=indent,eol,start
@@ -244,10 +265,9 @@ nnoremap <leader><space> :nohlsearch<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-let tp=$TERM_PROGRAM
+" let tp=$TERM_PROGRAM
+let tp='Apple_Terminal'
 if tp == 'Apple_Terminal'
-  :" map Mac OS X Terminal.app
-
   " map Home/End:
   :map <ESC>[H <Home>
   :map <ESC>[F <End>
@@ -285,6 +305,9 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
+highlight GitGutterDelete guifg='#ffff00' ctermfg=1
+highlight GitGutterAdd guifg=#ffff00 ctermfg=40
+
 " Custom Settings
 function! s:DiffWithSaved()
   let filetype=&ft
@@ -294,26 +317,3 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! Diffs call s:DiffWithSaved()
-
-" for persisting sessions
-" function! MakeSession()
-"   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
-"   if (filewritable(b:sessiondir) != 2)
-"     exe 'silent !mkdir -p ' b:sessiondir
-"     redraw!
-"   endif
-"   let b:filename = b:sessiondir . '/session.vim'
-"   exe "mksession! " . b:filename
-" endfunction
-
-" function! LoadSession()
-"   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
-"   let b:sessionfile = b:sessiondir . "/session.vim"
-"   if (filereadable(b:sessionfile))
-"     exe 'source ' b:sessionfile
-"   else
-"     echo "No session loaded."
-"   endif
-" endfunction
-" au VimEnter * nested :call LoadSession()
-" au VimLeave * :call MakeSession()

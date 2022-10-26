@@ -1,18 +1,18 @@
-begin
-  require 'ap'
-  IRB::Irb.class_eval do
-    def output_value
-      ap @context.last_value
-    end
-  end
-rescue LoadError => e
-  puts "ap gem not found.  Install gem awesome_print"
-end
+require 'irb/completion'
+require 'irb/ext/save-history'
+ARGV.concat [ '--readline', '--prompt-mode', 'simple' ]
 
+begin
+  $: << '/Users/nsinger/.rvm/gems/ruby-3.0.2@fleetio/gems/amazing_print-1.4.0/lib'
+   require 'amazing_print'
+   AmazingPrint.irb!
+rescue LoadError => _e
+  puts 'ap gem not found.  Install gem awesome_print'
+end
 
 begin
   require 'hirb'
   Hirb::View.enable
 rescue
-  puts "hirb gem not installed. Add it to your Gemfile or install by hand"
+  puts 'hirb gem not installed. Add it to your Gemfile or install by hand'
 end
